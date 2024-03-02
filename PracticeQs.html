@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .outerbox{
+            height: 150px;
+            width: 150px;
+            position:absolute;
+            animation: myAnimate 5s alternate ease-in-out infinite;
+            transition: transform 1s;
+            /* border: 2px solid; */
+        }
+        .outerbox:hover{
+            transform:scale(1.7) rotate(45deg) ;
+                     }
+        
+        .outercircle{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: yellow;
+        }
+        .eye{
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            position:absolute;
+        }
+        .lefteye{
+            background-color: black;
+            top: 35px;
+            left: 30px;
+
+        }
+        .righteye{
+            background-color: black;
+            top: 35px;
+            right: 30px;
+        }
+        .mouth{
+            height: 25px;
+            width:60px;
+            background-color: brown;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            position: absolute;
+            left:30px;
+            top:75px;
+        }
+        @keyframes myAnimate{
+            from{
+                left:0;
+            }
+            to{
+                left:500px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="outercircle">
+            <div class="eye lefteye"></div>
+            <div class="eye righteye"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+</body>
+</html>
